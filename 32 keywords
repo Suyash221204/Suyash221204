@@ -1,0 +1,115 @@
+               C Language “Keywords”
+There are 32 keywords:
+1)Auto: auto is an optional storage class specifier for declaring local variables.
+Ex: void exampleFunction() {
+    auto int a = 10;
+    auto float b = 3.14;
+    auto char c = 'A';
+    
+    // Code using a, b, c
+}
+2)Break: break keyword is used to terminate the execution of a loop or switch statement prematurely, transferring control to the statement immediately following the terminated loop or switch.
+Ex: Nested  Loops  with “ break”:
+ for (int i = 1; i <= 3; i++) {
+    printf("Outer loop iteration %d\n", i);
+    for (int j = 1; j <= 3; j++) {
+        printf("  Inner loop iteration %d\n", j);
+        if (j == 2) {
+            break;  // Exit the inner loop when j equals 2
+        }
+    }
+}
+3¬)Case: case keyword is used exclusively within switch statements to specify different possible values or ranges of values that a variable or expression might have.
+Ex: switch (expression) {
+    case constant1:
+        // Statements to execute if expression equals constant1
+        break;
+    case constant2:
+        // Statements to execute if expression equals constant2
+        break;
+    // More case statements as needed
+    default:
+        // Statements to execute if expression doesn't match any case
+        break;
+}
+4) Char: char is a fundamental data type used to declare character variables.
+Ex: #include <stdio.h>
+
+int main() {
+    char grade = 'B';
+    char firstInitial = 'J';
+    char lastInitial = 'D';
+    
+    printf("Grade: %c\n", grade);
+    printf("Initials: %c%c\n", firstInitial, lastInitial);
+    
+    return 0;
+}
+5)Const: const keyword is used to define constants or to qualify pointers. 
+Ex: const int* ptr;           // Pointer to a constant integer
+int num1 = 10;
+ptr = &num1;              // Okay, pointer can point to num1
+*ptr = 20;                // Error, cannot modify the value pointed by ptr
+
+int* const ptr2 = &num1;  // Constant pointer to an integer
+*ptr2 = 30;               // Okay, can modify the value pointed by ptr2
+ptr2 = &num2;             // Error, ptr2 cannot point to a different address\
+6)Continue: continue keyword is used inside loops to skip the current iteration of the loop and proceed to the next iteration. It is typically used in conjunction with conditional statements (if statements) to control when to skip iterations based on certain conditions.
+Ex: for (int i = 1; i <= 5; i++) {
+    if (i == 3) {
+        continue;  // Skip the current iteration when i equals 3
+    }
+    printf("%d ", i);
+}
+7)Default: default keyword is used within a switch statement to provide a default case when none of the case constants match the value of the expression being evaluated.
+Ex: int day = 7;
+switch (day) {
+    case 1:
+        printf("Monday\n");
+        break;
+    case 2:
+        printf("Tuesday\n");
+        break;
+    case 3:
+        printf("Wednesday\n");
+        break;
+    case 4:
+        printf("Thursday\n");
+        break;
+    case 5:
+        printf("Friday\n");
+        break;
+    default:
+        printf("Weekend\n");
+        break;
+}
+8)Do: do keyword is used as part of the do-while loop structure. This loop is similar to the while loop but with one key difference: in a do-while loop, the condition is evaluated after executing the loop body. This ensures that the loop body is executed at least once, regardless of whether the condition initially evaluates to true or false.
+Ex: #include <stdio.h>
+
+int main() {
+    int number;
+    do {
+        printf("Enter a positive number: ");
+        scanf("%d", &number);
+    } while (number <= 0);
+    
+    printf("You entered: %d\n", number);
+    
+    return 0;
+}
+ 9)Double: double keyword is used to declare variables that hold double-precision floating-point numbers. Double-precision means that these variables can store larger and more precise decimal values compared to variables of type float
+
+Ex: #include <stdio.h>
+
+int main() {
+    double length, width, area;
+    
+    printf("Enter length and width of a rectangle: ");
+    scanf("%lf %lf", &length, &width);
+    
+    area = length * width;
+    
+    printf("Area of the rectangle = %lf\n", area);
+    
+    return 0;
+}
